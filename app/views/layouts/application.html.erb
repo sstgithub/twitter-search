@@ -6,6 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header col-sm-12">
+        <%= form_tag("/last_25_tweets", method: "get", class: "navbar-form", role: "search") do %>
+          <div class="input-group col-sm-12">
+              <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search for a Twitter username!") %>
+              <div class="input-group-btn">
+                  <%= button_tag(type: "submit", class: "btn btn-default") do %>
+                    <i class="glyphicon glyphicon-search"></i>
+                  <% end %>
+              </div>
+          </div>
+        <% end %>
+      </div>
+    </nav>
   </head>
 
   <body>
