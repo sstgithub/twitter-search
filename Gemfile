@@ -36,10 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'pry-byebug', '~> 3.4.2'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.5'
-  gem 'timecop'
 end
 
 group :development do
@@ -55,4 +54,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'typhoeus', '~> 1.1.2'
+gem 'twitter', '~> 6.1.0'
+gem 'figaro', '~> 1.1.1'
+gem 'rinku', '~> 2.0.2'
