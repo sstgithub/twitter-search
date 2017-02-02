@@ -5,6 +5,7 @@
     <% @tweets.each_with_index do |tweet, index| %>
       <div class="row">
         <div class="tweet col-xs-12">
+          <b><%= tweet.created_at.to_s %>:</b>
           <%= parse_links_and_mentions_for(tweet.text).html_safe %>
           <!-- unless last tweet, add a horizontal divider -->
           <% if index < (@tweets.length - 1) %>
